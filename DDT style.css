@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    color: #646669;
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-weight: 500;
+    font-style: medium;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    
+    background: #323437;
+    width: 100%;
+    height: 100vh;
+    padding: 0 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.heading-image {
+    display: block;
+    margin: 0 auto;
+    width: 100px; 
+    height: auto;
+    text-align: center; 
+}
+
+
+@keyframes pop-in {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.7;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+.heading-image {
+    display: block;
+    margin: 20px auto;
+    width: 150px; 
+    height: auto;
+    animation: pop-in 0.6s ease-out;
+}
+
+.heading {
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    color: rgb(191 156 27);
+}
+
+.container {
+    width: 80%;
+    
+    padding: 20px;
+}
+
+.box {
+   
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.text {
+    font-size: 24px;
+    font-weight: lighter;
+    margin-bottom: 10px;
+    padding: 10px;
+    word-spacing: 12px;
+    line-height: 1.6;
+    letter-spacing: 1.4px;
+}
+
+.box .text span.active {
+    
+    color: #e2b714;
+    text-decoration: underline;
+}
+
+.box .text span.correct {
+    color: #31C48D;
+    
+}
+
+.box .text span.incorrect {
+    color: #F05252;
+    
+}
+
+.box-2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10px;
+    gap: 10px;
+}
+
+.box-2 p span {
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.input-text {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    outline: none;
+    opacity: 0;
+    width: 0;
+    position: absolute;
+    z-index: 9;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    
+    background-color: #e2b714;
+    color: rgb(209 213 219);
+    cursor: pointer;
+    outline: none;
+    font-size: 18px;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+.box-2 p {
+    font-size: 15px;
+    font-weight: normal;
+}
+@keyframes blink {
+    20% {
+    opacity: 0;
+    }
+}
+
+.box .text span.active {
+    color: #e2b714;
+    text-decoration: underline;
+    border-right: 2px solid #e2b714;
+    animation: blink 0.7s infinite;
+}
+
+@media screen and (width<=520px) {
+    .box-2 {
+        flex-direction: column;
+    }
+
+    .heading {
+        font-size: 30px;
+       
+        margin: 30px 0 10px 0;
+    }
+
+    .container {
+        width: 100%;
+        padding: 0;
+    }
+
+    .box {
+        border: none;
+    }
+}
+@media  screen and (width<=1024px) {
+    body {
+        height: auto;
+        padding: 40px 10px;
+    }
+}
