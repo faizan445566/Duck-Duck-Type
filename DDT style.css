@@ -86,11 +86,7 @@ body {
     letter-spacing: 1.4px;
 }
 
-.box .text span.active {
-    
-    color: #e2b714;
-    text-decoration: underline;
-}
+
 
 .box .text span.correct {
     color: #31C48D;
@@ -155,7 +151,7 @@ body {
 
 .box .text span.active {
     color: #e2b714;
-    text-decoration: underline;
+    text-decoration: inline;
     border-right: 2px solid #e2b714;
     animation: blink 0.7s infinite;
 }
